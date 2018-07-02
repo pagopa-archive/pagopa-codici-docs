@@ -1,8 +1,6 @@
 ﻿
-|AGID_logo_carta_intestata-02.png|
-   
 ############################################################################################
-Specifiche Attuative dei Codici Identificativi di Versamento, Riversamento e Rendicondazione
+Specifiche attuative dei codici identificativi di versamento, riversamento e rendicontazione
 ############################################################################################
 
 .. toctree::
