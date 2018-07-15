@@ -1,9 +1,9 @@
-﻿document:
-  name: pagoPA, Codici Identificativi di Versamento, Riversamento e Rendicondazione
-  description: |
-    Specifiche Attuative dei Codici Identificativi di Versamento, Riversamento e Rendicondazione di pagoPA versione 1.3.1  
-  tags:
+--- 
+document: 
+  description: "Allegato A alle «Linee guida per l’effettuazione dei pagamenti elettronici a favore delle pubbliche amministrazioni e dei gestori di pubblici servizi»."
+  name: "Specifiche attuative dei codici identificativi di versamento, riversamento e rendicondazione"
+  tags: 
+    - specifiche
     - SANP
-    - pagoPA
     - SACI
-    - AgID
+    - pagoPA
