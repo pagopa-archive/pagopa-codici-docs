@@ -14,8 +14,11 @@
 
 .. _formato-della-causale-di-versamento:
 
-3. Formato della Causale di versamento 
+3. Formato della Causale di versamento
 ======================================
+
+|image7| NB: il presente capitolo è applicabile esclusivamente per le casistiche indicate nel
+:ref:`capitolo 4.2 <utilizzo-del-bollettino-di-conto-corrente-postale>`.
 
 La causale di versamento è il dato, predisposto dall’Ente Creditore, che
 il pagatore o il soggetto versante deve indicare - insieme al codice
@@ -116,4 +119,7 @@ all’imputazione della disposizione di accredito (SCT).
 
 
 .. |pagoPA_logo| image:: media/header.png
+.. |image7| image:: media/image7.png
+   :width: 0.7874in
+   :height: 0.22905in
    

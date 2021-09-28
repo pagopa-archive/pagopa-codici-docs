@@ -32,7 +32,7 @@ di pagamento... »* rappresentando pertanto uno degli elementi essenziali
 sui quali si base il sistema pagoPA\ :sup:`®`.
 
 Lo stesso `paragrafo 7.1 delle Linee guida <http://www.agid.gov.it/sites/default/files/linee_guida/lineeguidapagamenti_v_1_1_0_0.pdf>`_ 
-concede agli Enti Creditori la
+concede agli Enti Creditori la 
 possibilità di *« .... demandare ad un soggetto terzo, in tutto o in
 parte, la generazione dell’Identificativo Univoco di Versamento, curando
 che ne sia mantenuta l’univocità nel tempo».*
@@ -54,8 +54,7 @@ generazione” del codice stesso (:ref:`vedi § 2.1.2 <punti-di-generazione-del-
 2.1.1 Natura del pagamento
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Come indicato nel `capitolo 2 delle SANP <http://pagopa-specifichepagamenti.readthedocs.io/it/latest/_docs/Capitolo2.html#modelli-del-processo-di-pagamento>`_ (Allegato B alle Linee guida),
-gli incassi che un Ente Creditore deve gestire possono essere distinti
+Come indicato `nelle SANP <https://docs.italia.it/italia/pagopa/pagopa-specifichepagamenti-docs/it/v2.4.3/_docs/sezione1-funzionamento-generale-del-sistema/1_00_00_funzionamento_generale.html#ciclo-di-vita-del-pagamento>`_ (Allegato B alle Linee guida), gli incassi che un Ente Creditore deve gestire possono essere distinti
 secondo due diverse modalità:
 
 -  su iniziativa dell’Ente Creditore (o dovuti): è il caso in cui
@@ -68,11 +67,11 @@ secondo due diverse modalità:
 
 Nel primo caso (avviso analogico o digitale), in cui il pagamento può
 essere eseguito attraverso i canali messi a disposizione dai PSP 
-(`cfr. § 2.2 delle SANP <http://pagopa-specifichepagamenti.readthedocs.io/it/latest/_docs/Capitolo2.html#processo-di-pagamento-attivato-presso-il-psp>`_), 
-si rinvia  :ref:`al successivo § 2.2 <numero-avviso-e-codice-IUV-pagamenti-presso-psp>`.
+(`cfr. SANP <https://docs.italia.it/italia/pagopa/pagopa-specifichepagamenti-docs/it/v2.4.3/_docs/sezione2-gestione-posizione-debitoria/2_03_00_processo_pagamento_psp.html>`_), 
+si rinvia :ref:`al successivo § 2.2 <numero-avviso-e-codice-IUV-pagamenti-presso-psp>`.
 
 Nella seconda eventualità, associata ai pagamenti attivati preso l'Ente
-Creditore (`cfr. § 2.1 delle SANP <http://pagopa-specifichepagamenti.readthedocs.io/it/latest/_docs/Capitolo2.html#processo-di-pagamento-attivato-presso-lente-creditore>`_), si rimanda :ref:`al successivo § 2.3 <codice-iuv-caso-pagamenti-ente-creditore>`. Si
+Creditore (`cfr. SANP <https://docs.italia.it/italia/pagopa/pagopa-specifichepagamenti-docs/it/v2.4.3/_docs/sezione2-gestione-posizione-debitoria/2_02_00_processo_pagamento_ec.html>`_), si rimanda :ref:`al successivo § 2.3 <codice-iuv-caso-pagamenti-ente-creditore>`. Si
 tenga presente che, se l’utilizzatore finale decide di effettuare il
 pagamento in un tempo successivo e allo scopo richiede la stampa di un
 avviso analogico oppure l'invio di un avviso digitale, si ricade nel
@@ -93,7 +92,7 @@ Tale situazione può essere presente anche presso Enti Creditori dotati
 di un'organizzazione complessa e articolata in più unità autonome, che
 hanno la necessità di generare il codice IUV in maniera indipendente.
 
-Definiamo quindi "punto di generazione del codice IUV" qualsiasi entità,
+Si definisce quindi "punto di generazione del codice IUV" qualsiasi entità,
 facente parte o meno dell'organizzazione dell'Ente Creditore, incaricata
 da questo di associare un codice IUV ad un unico pagamento presente
 nell'archivio dei pagamenti in attesa di cui al 
@@ -114,14 +113,13 @@ dell'ente.
 
 Tale codice viene denominato "codice di segregazione".
 
-L'Agenzia per l'Italia Digitale attribuisce il codice di segregazione ad
+PagoPA S.p.A. attribuisce il codice di segregazione ad
 ogni punto di generazione del codice IUV in funzione del soggetto che
 svolge il ruolo di intermediario o partner tecnologico, secondo la
 seguente classificazione:
 
 a. **Erogatori di servizi centralizzati**: intermediari tecnologici,
-   riconosciuti da AgID, che erogano servizi in modalità accentrata a
-   livello nazionale;
+   che erogano servizi in modalità accentrata a livello nazionale;
 
 b. **Punti di generazione del Codice IUV**: qualsiasi intermediario o
    partner tecnologico che non rientra nella classificazione precedente,
@@ -152,7 +150,7 @@ contestualmente il pagamento del servizio - l’utilizzo della procedura
 centralizzata sarà obbligatorio per tutti i comuni italiani.
 
 L'attribuzione della qualifica di erogatore di servizi centralizzati
-deve essere richiesta all'AgID che provvederà ad aggiornare l'elenco
+deve essere richiesta a PagoPA SpA che provvederà ad aggiornare l'elenco
 riportato in Tabella 1.
 
 **Tabella** **1 - Elenco servizi centralizzati**
@@ -174,7 +172,7 @@ riportato in Tabella 1.
 2.1.3.2 Punti di generazione del codice IUV
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-AgID attribuirà uno o più codici segregazione (progressivamente a
+PagoPA S.p.A. attribuirà uno o più codici segregazione (progressivamente a
 salire: da 00 a 49) ad ognuno degli intermediari/partner tecnologici,
 ovvero entità autonome dell'Ente Creditore, secondo quanto da questi
 richiesto.
@@ -472,12 +470,9 @@ alfanumerico> dovrà essere costante nel corso del tempo.
    di pagamenti in attesa e viene indirizzato mediante i meccanismi di
    configurazione del Nodo dei Pagamenti-SPC, che in questo modo sarà in
    grado di individuare il canale corretto di inoltro delle richieste di
-   verifica e attivazione di pagamento 
-   (`cfr § 8.2.3 delle SANP <http://pagopa-specifichepagamenti.readthedocs.io/it/latest/_docs/Capitolo8.html#pagamenti-in-attesa-e-richiesta-di-generazione-della-rpt>`_
-
-   In sintesi questa informazione rappresenta "l'indirizzo"
-   dell'archivio dove sono conservate le richieste in attesa che hanno
-   dato luogo all’avviso di pagamento.
+   verifica e attivazione di pagamento. In sintesi questa informazione
+   rappresenta "l'indirizzo" dell'archivio dove sono conservate le
+   richieste in attesa che hanno dato luogo all’avviso di pagamento.
 
 .. [4]
    È il caso, ad esempio, dell'Ente Creditore Equitalia che identifica
