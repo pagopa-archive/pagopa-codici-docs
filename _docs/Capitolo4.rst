@@ -38,7 +38,7 @@ La tabella indica come valorizzare gli attributi dello schema di un SCT:
 | AT-02. | Ordinante.               | <Ragione Sociale PSP> Servizio pagoPA.         |.        |
 +--------+--------------------------+------------------------------------------------+---------+
 | AT-05. | Remittance Information.  | /PUR/LGPE-RIVERSAMENTO <Descrizione> pagamenti |         |
-|.       |                          | del <aaammgg>/URI/< identificativoFlusso >     |         |
+|.       |                          | del <aaaammgg>/URI/<identificativoFlusso>      |         |
 +--------+--------------------------+------------------------------------------------+---------+
 | AT-10. | Codice Identificativo.   | <CF Ordinante>                                 | opt.    |
 |.       |.Ordinante.               |                                                |.        |
@@ -48,7 +48,7 @@ La tabella indica come valorizzare gli attributi dello schema di un SCT:
 | AT-24. | Codice Indentificativo.  | <CF Beneficiario>                              |.        |
 |.       | Beneficiario.            |                                                |.        |
 +--------+--------------------------+------------------------------------------------+---------+
-| AT-42. | Referenza ordinante.     | <aaammgg><EndToEndID>                          |.        |
+| AT-42. | Referenza ordinante.     | <aaaammgg><EndToEndID>                         |.        |
 +--------+--------------------------+------------------------------------------------+---------+
 La nota "opt" indica che la valorizzazione è opzionale.
 
@@ -61,7 +61,7 @@ Legenda:
    dove il numero d’ordine è un progressivo di una cifra compreso fra 1 e 9.
    NB: Il numero massimo di SCT per la stessa giornata operativa dovrà essere
    tassativamente pari a 10. 
--  <aaammgg>: data della giornata operativa di incasso delle richieste di pagamento
+-  <aaaammgg>: data della giornata operativa di incasso delle richieste di pagamento
 -  <Iban Beneficiario>: Il PSP attinge tale dato dalle richieste di pagamento eseguite.
 -  <Ragione Sociale Ente Creditore>: Il PSP attinge tale dato dalle richieste di pagamento
    eseguite.
