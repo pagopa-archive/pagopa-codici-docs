@@ -1,5 +1,5 @@
 ﻿
-|AGID_logo_carta_intestata-02.png|
+|pagoPA_logo|
    
 +---------------------------------------------------------------------------------------------------+
 | **SPECIFICHE ATTUATIVE DEI CODICI IDENTIFICATIVI DI VERSAMENTO, RIVERSAMENTO E RENDICONTAZIONE**  |
@@ -95,7 +95,5 @@ Sintesi dei cambiamenti
 +-----------------------------------+-----------------------------------+
 
 
-.. |AGID_logo_carta_intestata-02.png| image:: media/header.png
-   :width: 5.90551in
-   :height: 1.30277in
+.. |pagoPA_logo| image:: media/header.png
    

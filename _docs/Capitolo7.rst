@@ -1,5 +1,5 @@
 ﻿
-|AGID_logo_carta_intestata-02.png|
+|pagoPA_logo|
    
 +---------------------------------------------------------------------------------------------------+
 | **SPECIFICHE ATTUATIVE DEI CODICI IDENTIFICATIVI DI VERSAMENTO, RIVERSAMENTO E RENDICONTAZIONE**  |
@@ -336,9 +336,7 @@ Esempi: **2015-07-15xxxxxxxx-0000000001**
 **2015-07-15xxxxxxxx-hh_mm_ss_nnn**
 
 
-.. |AGID_logo_carta_intestata-02.png| image:: media/header.png
-   :width: 5.90551in
-   :height: 1.30277in
+.. |pagoPA_logo| image:: media/header.png
 .. |image17| image:: media/image7.png
    :width: 0.7874in
    :height: 0.22905in

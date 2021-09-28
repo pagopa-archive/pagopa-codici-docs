@@ -1,5 +1,5 @@
 ﻿
-|AGID_logo_carta_intestata-02.png|
+|pagoPA_logo|
 
 +---------------------------------------------------------------------------------------------------+
 | **SPECIFICHE ATTUATIVE DEI CODICI IDENTIFICATIVI DI VERSAMENTO, RIVERSAMENTO E RENDICONTAZIONE**  |
@@ -54,7 +54,5 @@ relativi all’acquisto della Marca da bollo digitale.
    ex art. 6, comma 2, provvedimento del Direttore dell’Agenzia delle Entrate del 19 settembre 2014.
 
 
-.. |AGID_logo_carta_intestata-02.png| image:: media/header.png
-   :width: 5.90551in
-   :height: 1.30277in
+.. |pagoPA_logo| image:: media/header.png
    

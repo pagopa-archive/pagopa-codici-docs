@@ -1,5 +1,5 @@
 ﻿
-|AGID_logo_carta_intestata-02.png|
+|pagoPA_logo|
    
 +---------------------------------------------------------------------------------------------------+
 | **SPECIFICHE ATTUATIVE DEI CODICI IDENTIFICATIVI DI VERSAMENTO, RIVERSAMENTO E RENDICONTAZIONE**  |
@@ -26,7 +26,5 @@ dell'importo trasferito al tesoriere dell'ente, nonché le informazioni
 che lo stesso PSP deve mettere a disposizione dell'Ente Creditore ai
 fini della rendicontazione e riconciliazione dei pagamenti.
 
-.. |AGID_logo_carta_intestata-02.png| image:: media/header.png
-   :width: 5.90551in
-   :height: 1.30277in
+.. |pagoPA_logo| image:: media/header.png
    

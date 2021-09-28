@@ -1,5 +1,5 @@
 ﻿
-|AGID_logo_carta_intestata-02.png|
+|pagoPA_logo|
 
 +---------------------------------------------------------------------------------------------------+
 | **SPECIFICHE ATTUATIVE DEI CODICI IDENTIFICATIVI DI VERSAMENTO, RIVERSAMENTO E RENDICONTAZIONE**  |
@@ -72,9 +72,7 @@ contabile e riversamento dei fondi, nonché le modalità con le quali
 effettuare la riconciliazione dei pagamenti presso gli enti creditori.
 
 
-.. |AGID_logo_carta_intestata-02.png| image:: media/header.png
-   :width: 5.90551in
-   :height: 1.30277in
+.. |pagoPA_logo| image:: media/header.png
 .. |image8| image:: media/image8.png
    :width: 5.90551in
    :height: 3.33513in
