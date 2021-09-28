@@ -9,7 +9,7 @@
 | *pubbliche amministrazioni e dei gestori di pubblici servizi"*                                    |
 |                                                                                                   |
 |                                                                                                   |
-| **Versione 1.3.1 - gennaio 2018**                                                                 |
+| **Versione 1.4.0 - ottobre 2021**                                                                 |
 +---------------------------------------------------------------------------------------------------+
 
 .. _specificità-per-il-pagamento-della-marca-da-bollo-digitale:
@@ -33,7 +33,6 @@ relativi all’acquisto della Marca da bollo digitale.
 
 .. [8]
    ex art. 6, comma 2, provvedimento del Direttore dell’Agenzia delle Entrate del 19 settembre 2014.
-
 
 .. |pagoPA_logo| image:: media/header.png
    

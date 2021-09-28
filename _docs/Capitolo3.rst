@@ -9,7 +9,7 @@
 | *pubbliche amministrazioni e dei gestori di pubblici servizi"*                                    |
 |                                                                                                   |
 |                                                                                                   |
-| **Versione 1.3.1 - gennaio 2018**                                                                 |
+| **Versione 1.4.0 - ottobre 2021**                                                                 |
 +---------------------------------------------------------------------------------------------------+
 
 .. _formato-della-causale-di-versamento:
@@ -122,4 +122,3 @@ all’imputazione della disposizione di accredito (SCT).
 .. |image7| image:: media/image7.png
    :width: 0.7874in
    :height: 0.22905in
-   
