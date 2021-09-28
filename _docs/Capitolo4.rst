@@ -14,7 +14,7 @@
 
 .. _operazione-di-trasferimento-fondi:
 
-4. Operazione di trasferimento fondi |image4|
+4. Operazione di trasferimento fondi |image6|
 ====================================
 
 Per l’esecuzione dell’operazione devono essere utilizzati gli schemi
@@ -164,6 +164,9 @@ indicare le stesse informazioni sopra riportate (Tabella 4).
 .. |image5| image:: media/image5.png
    :width: 0.7874in
    :height: 0.24059in
+.. |image6| image:: media/image6.png
+   :width: 0.7874in
+   :height: 0.22651in
 .. |image7| image:: media/image4.png
    :width: 0.7874in
    :height: 0.22651in
