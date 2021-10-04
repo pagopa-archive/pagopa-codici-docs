@@ -241,7 +241,7 @@ correlato ad un unico codice IBAN di accredito.
 
 .. _precisazioni-sulla-colonna-contenutodella-tabella-4:
 
-7.1 Precisazioni sulla colonna “contenuto”della Tabella 4    |image18|    
+7.1 Precisazioni sulla colonna “contenuto” della Tabella 4    |image18|    
 ---------------------------------------------------------
 
 Tenuto presente che il significato dei dati richiesti per il flusso di
@@ -250,7 +250,7 @@ di seguito sono riportate alcune precisazioni sui dati presenti nel
 flusso di rendicontazione:
 
 **identificativoFlusso:** deve essere lo stesso riportato nel
-componente **< idFlusso>** della causale del SEPA Credit Transfer di
+componente **<idFlusso>** della causale del SEPA Credit Transfer di
 Riversamento (dato “*Unstructured Remittance Information*” -
 attributo AT-05, :ref:`vedi capitolo 6 <riversamento-agli-enti-creditori>`);
 

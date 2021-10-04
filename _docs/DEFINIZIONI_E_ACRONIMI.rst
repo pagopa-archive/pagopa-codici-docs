@@ -89,6 +89,13 @@ Definizioni e Acronimi
 | pagoPA:sup:'®'                | Il sistema dei pagamenti a favore delle pubbliche amministrazioni                 |
 |                               | e dei gestori di pubblici servizi.                                                |
 +-------------------------------+-----------------------------------------------------------------------------------+
+| PagoPA S.p.A.                 | Società partecipata dallo Stato creata allo scopo di diffondere i servizi.        |
+|                               | digitali in Italia. La società è nata per effetto del Decreto Legge               |
+|                               | “Semplificazioni” (n. 135 del 14 dicembre del 2018), convertito in legge il.      |
+|                               | 12 gennaio 2019, che prevede l’istituzione di “una società per azioni interamente |
+|                               | partecipata dallo Stato”, vigilata dal Presidente del Consiglio dei ministri o.   |
+|                               | del Ministro delegato. Gestore del Nodo dei Pagamenti-SPC.                        |
++-------------------------------+-----------------------------------------------------------------------------------+
 | Partner tecnologico           | Soggetto che gestisce le attività di interconnessione al NodoSPC per conto        |
 |                               | di una PA, nel rispetto delle specifiche tecniche contenute nelle Linee guida.    |
 +-------------------------------+-----------------------------------------------------------------------------------+

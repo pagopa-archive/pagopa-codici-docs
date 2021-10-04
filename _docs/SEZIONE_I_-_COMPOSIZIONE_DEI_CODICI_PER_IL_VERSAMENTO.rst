@@ -33,7 +33,7 @@ indicare obbligatoriamente per il versamento*\ ».
 
 Da ultimo, nel capitolo 4, verranno indicate le regole base per la
 composizione dell’operazione di trasferimento fondi, mentre nel capitolo
-5 saranno date istruzioni per la riconciliazione dei pagamenti che non
-sono oggetto di un riversamento cumulativo.
+5 sarà illustrata la specificità per il pagamento della Marca da bollo
+digitale.
 
 .. |pagoPA_logo| image:: media/header.png

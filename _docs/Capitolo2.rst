@@ -54,7 +54,7 @@ generazione” del codice stesso (:ref:`vedi § 2.1.2 <punti-di-generazione-del-
 2.1.1 Natura del pagamento
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Come indicato `nelle SANP <https://docs.italia.it/italia/pagopa/pagopa-specifichepagamenti-docs/it/v2.4.3/_docs/sezione1-funzionamento-generale-del-sistema/1_00_00_funzionamento_generale.html#ciclo-di-vita-del-pagamento>`_ (Allegato B alle Linee guida), gli incassi che un Ente Creditore deve gestire possono essere distinti
+Come indicato `nelle SANP <https://docs.italia.it/italia/pagopa/pagopa-specifichepagamenti-docs/it/master/_docs/sezione1-funzionamento-generale-del-sistema/1_00_00_funzionamento_generale.html#ciclo-di-vita-del-pagamento>`_ (Allegato B alle Linee guida), gli incassi che un Ente Creditore deve gestire possono essere distinti
 secondo due diverse modalità:
 
 -  su iniziativa dell’Ente Creditore (o dovuti): è il caso in cui
@@ -67,11 +67,11 @@ secondo due diverse modalità:
 
 Nel primo caso (avviso analogico o digitale), in cui il pagamento può
 essere eseguito attraverso i canali messi a disposizione dai PSP 
-(`cfr. SANP <https://docs.italia.it/italia/pagopa/pagopa-specifichepagamenti-docs/it/v2.4.3/_docs/sezione2-gestione-posizione-debitoria/2_03_00_processo_pagamento_psp.html>`_), 
+(`cfr. SANP <https://docs.italia.it/italia/pagopa/pagopa-specifichepagamenti-docs/it/master/_docs/sezione2-gestione-posizione-debitoria/2_03_00_processo_pagamento_psp.html>`_), 
 si rinvia :ref:`al successivo § 2.2 <numero-avviso-e-codice-IUV-pagamenti-presso-psp>`.
 
 Nella seconda eventualità, associata ai pagamenti attivati preso l'Ente
-Creditore (`cfr. SANP <https://docs.italia.it/italia/pagopa/pagopa-specifichepagamenti-docs/it/v2.4.3/_docs/sezione2-gestione-posizione-debitoria/2_02_00_processo_pagamento_ec.html>`_), si rimanda :ref:`al successivo § 2.3 <codice-iuv-caso-pagamenti-ente-creditore>`. Si
+Creditore (`cfr. SANP <https://docs.italia.it/italia/pagopa/pagopa-specifichepagamenti-docs/it/master/_docs/sezione2-gestione-posizione-debitoria/2_02_00_processo_pagamento_ec.html>`_), si rimanda :ref:`al successivo § 2.3 <codice-iuv-caso-pagamenti-ente-creditore>`. Si
 tenga presente che, se l’utilizzatore finale decide di effettuare il
 pagamento in un tempo successivo e allo scopo richiede la stampa di un
 avviso analogico oppure l'invio di un avviso digitale, si ricade nel
