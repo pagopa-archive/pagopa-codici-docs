@@ -85,8 +85,7 @@ seguente significato:
 |                                  |         |         |         |         |                                                  |
 |                                  |         |         |         |         | **[YYYY]-[MM]-[DD]T[hh]:[mm]:[ss]**              |
 +----------------------------------+---------+---------+---------+---------+--------------------------------------------------+
-| identificativoUnivocoRegolamento | 1       | an      | 1..1    | 1..35   | Riferimento assegnato dal prestatore di          |
-|                                  |         |         |         |         | servizi di pagamento all’operazione di           |
+| identificativoUnivocoRegolamento | 1       | an      | 1..1    | 1..35   | Riferimento dell’operazione di           |
 |                                  |         |         |         |         | trasferimento fondi con la quale viene           |
 |                                  |         |         |         |         | regolato contabilmente il riversamento           |
 |                                  |         |         |         |         | delle somme incassate ovvero l’accumulo          |
@@ -176,8 +175,6 @@ seguente significato:
 |                                  |         |         |         |         | nel flusso.                                      |
 +----------------------------------+---------+---------+---------+---------+--------------------------------------------------+
 | identificativoUnivocoRiscossione | 2       | an      | 1..1    | 1..35   | Riferimento univoco dell’operazione              |
-|                                  |         |         |         |         | assegnato al pagamento dal Prestatore            |
-|                                  |         |         |         |         | dei servizi di Pagamento                         |
 +----------------------------------+---------+---------+---------+---------+--------------------------------------------------+
 | indiceDatiSingoloPagamento       | 2       | n       | 0..1    | 1       | Indice dell’occorrenza del pagamento             |
 |                                  |         |         |         |         | all’interno della struttura                      |
@@ -207,7 +204,7 @@ seguente significato:
 |                                  |         |         |         |         |                                                  |
 |                                  |         |         |         |         |                                                  |
 |                                  |         |         |         |         | - **9** = Pagamento eseguito                     |
-|                                  |         |         |         |         |   in assenza di RPT                              |
+|                                  |         |         |         |         |   in presenza di presenza di anomalie            |
 +----------------------------------+---------+---------+---------+---------+--------------------------------------------------+
 | dataEsitoSingoloPagamento        | 2       | an      | 1..1    | 10      | Indica la data in cui è stato                    |
 |                                  |         |         |         |         | disposto o revocato il pagamento,                |
@@ -251,16 +248,9 @@ indicato della RT rendicontata (cfr. Allegato B alle Linee guida *“Specifiche 
 
 **identificativoUnivocoRegolamento:** ulteriore dato ‘non ambiguo’
 utilizzato per abbinare il flusso di rendicontazione con l’accredito
-ricevuto. Può contenere, in alternativa, uno dei seguenti dati
-presenti nel SCT di riversamento (cfr. *SEPA Credit Transfert Scheme
-Rulebook*):
+ricevuto. Contiene il *Transaction Reference Number* (TRN, attributo AT-43 Originator Bank’s Reference) dell'SCT 
+di riversamento (cfr. *SEPA Credit Transfert Scheme Rulebook*):
 
-- a) *Transaction Reference Number* (TRN, attributo AT-43 Originator
-     Bank’s Reference), qualora il PSP, al momento della generazione
-     del flusso di rendicontazione, disponga di tale dato;
-
-- b) *EndToEndId* (attributo AT-41 Originator’s Reference), in caso
-     contrario.
 
 **identificativoUnivocoRiscossione:** rappresenta l’identificativo
 con il quale il prestatore di servizi di pagamento individua la
