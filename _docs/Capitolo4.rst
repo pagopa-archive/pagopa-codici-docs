@@ -14,7 +14,7 @@
 
 .. _operazione-di-trasferimento-fondi:
 
-4. Operazione di trasferimento fondi |image6|
+4. Operazione di trasferimento fondi
 ====================================
 
 Per l’operazione di trasferimento dei fondi a ogni Ente Creditore il PSP
@@ -67,7 +67,7 @@ Legenda:
    eseguite.
 -  <CF Beneficiario>: Il PSP attinge tale dato dalle richieste di pagamento eseguite.
 -  <idFlusso>: specifica il dato relativo all’informazione identificativoFlusso presente
-   nel flusso di rendicontazione descritto nel successivo :ref:`capitolo 7 <flusso-di-rendicontazione>`.
+   nel flusso di rendicontazione descritto nel successivo :ref:`§ 6 <flusso-di-rendicontazione>`.
 -  <EndToEndID>: è riportato il dato identificativoUnivocoRiscossione indicato nel
    Flusso di rendicontazione. Viene valorizzato solo nel casi in cui il PSP al momento
    della predisposizione del flusso di rendicontazione non disponga del TRN. L’utilizzo
@@ -124,7 +124,7 @@ Creditore nella misura economica direttamente imputabile al PSP.
 
 .. _utilizzo-del-bollettino-di-conto-corrente-postale:
 
-4.2 Utilizzo del bollettino di conto corrente postale |image5| 
+4.2 Utilizzo del bollettino di conto corrente postale 
 -----------------------------------------------------
 
 
@@ -132,11 +132,11 @@ La causale del versamento - obbligatoria per le pubbliche
 amministrazioni ai sensi dell’articolo 4, comma 4, del DPR 144/2001 -
 deve essere compilata anche per i versamenti a favore dei gestori di
 pubblici servizi e deve essere conforme al formato descritto nel
-:ref:`capitolo 3 <formato-della-causale-di-versamento>`.
+:ref:`§ 3 <formato-della-causale-di-versamento>`.
 
 .. _rifiuto-del-sepa-credit-transfer:
 
-4.3 Rifiuto del SEPA Credit Transfer |image7|
+4.3 Rifiuto del SEPA Credit Transfer
 ------------------------------------
 
 Qualora il SEPA Credit Transfer venga restituito con messaggio di REJECT
@@ -152,7 +152,7 @@ quale dovrà indicare le informazioni di Tabella 4.
 +===================================+==========================================================+
 | Identificativo del PSP            | così come indicato nella componente <istituto mittente>  |
 |                                   | del dato identificativoFlusso,                           |
-|                                   | :ref:`vedi § 7.2 <stand-del-dato-identificativoflusso>`  |
+|                                   | :ref:`vedi § 6.2 <stand-del-dato-identificativoflusso>`  |
 +-----------------------------------+----------------------------------------------------------+
 | Denominazione del PSP             |                                                          |
 +-----------------------------------+----------------------------------------------------------+
@@ -201,15 +201,3 @@ indicare le stesse informazioni sopra riportate (Tabella 4).
 
 
 .. |pagoPA_logo| image:: media/header.png
-.. |image4| image:: media/image7.png
-   :width: 0.7874in
-   :height: 0.22905in
-.. |image5| image:: media/image5.png
-   :width: 0.7874in
-   :height: 0.24059in
-.. |image6| image:: media/image6.png
-   :width: 0.7874in
-   :height: 0.22651in
-.. |image7| image:: media/image4.png
-   :width: 0.7874in
-   :height: 0.22651in

@@ -17,8 +17,8 @@
 3. Formato della Causale di versamento
 ======================================
 
-|image7| NB: il presente capitolo è applicabile esclusivamente per le casistiche indicate nel
-:ref:`capitolo 4.2 <utilizzo-del-bollettino-di-conto-corrente-postale>`.
+**NB**: il presente capitolo è applicabile esclusivamente per le casistiche indicate nel
+:ref:`§ 4.2 <utilizzo-del-bollettino-di-conto-corrente-postale>`.
 
 La causale di versamento è il dato, predisposto dall’Ente Creditore, che
 il pagatore o il soggetto versante deve indicare - insieme al codice
@@ -34,7 +34,7 @@ e finalizzata al trattamento automatizzato delle informazioni tra partner commer
 In particolare, utilizzando questa configurazione, potranno essere
 utilizzate due stringhe di caratteri alternative tra loro in funzione
 della modalità di generazione del codice IUV da parte dell’Ente
-Creditore (vedi capitolo 2):
+Creditore (vedi § 2):
 
 +-------------------------------------------------+-----------------------------------------------------------------------+
 | **/RFS/<IUV>/<importo>[/TXT/<descrizione >]**   | Schemi (D), (F)                                                       |  
@@ -119,6 +119,3 @@ all’imputazione della disposizione di accredito (SCT).
 
 
 .. |pagoPA_logo| image:: media/header.png
-.. |image7| image:: media/image7.png
-   :width: 0.7874in
-   :height: 0.22905in

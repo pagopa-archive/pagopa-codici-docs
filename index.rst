@@ -17,7 +17,6 @@ Specifiche attuative dei codici identificativi di versamento, riversamento e ren
    _docs/Capitolo5.rst
    _docs/Capitolo6.rst
    _docs/Capitolo7.rst
-   _docs/Capitolo8.rst
    _docs/SEZIONE_II_-_COMPOSIZIONE_DEI_CODICI_PER_IL_RIVERSAMENTO_E_LA_RENDICONTAZIONE.rst
    _docs/APPENDICE_1.rst
 

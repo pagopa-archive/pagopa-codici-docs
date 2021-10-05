@@ -15,7 +15,7 @@
 .. _generazione-dellidentificativo-univoco-di-versamento:
 
 
-2. Generazione dell’Identificativo Univoco di Versamento          |image1|
+2. Generazione dell’Identificativo Univoco di Versamento
 ========================================================
 
 Secondo quanto definito nel `paragrafo 7.1 delle Linee guida.  <http://www.agid.gov.it/sites/default/files/linee_guida/lineeguidapagamenti_v_1_1_0_0.pdf>`_ 
@@ -41,6 +41,7 @@ che ne sia mantenuta l’univocità nel tempo».*
 
 2.1 Struttura del Codice IUV
 ----------------------------
+
 La generazione di un codice IUV che risulti **univoco** nel corso del
 tempo è una responsabilità in capo all'Ente Creditore, che è libero di
 strutturarne la composizione secondo le proprie esigenze, facendo
@@ -497,9 +498,6 @@ alfanumerico> dovrà essere costante nel corso del tempo.
 
 
 .. |pagoPA_logo| image:: media/header.png
-.. |image1| image:: media/image5.png
-   :width: 0.7874in
-   :height: 0.24059in
 .. |image2| image:: media/image9.png
    :width: 5.90551in
    :height: 3.33513in
