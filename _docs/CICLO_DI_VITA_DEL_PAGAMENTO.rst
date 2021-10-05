@@ -63,15 +63,6 @@ servizi di pagamento devono mettere in atto per consentire
 l’effettuazione dei pagamenti elettronici da parte degli utilizzatori
 finali.
 
-In particolare, nella **Sezione I** sono definite: le attività legate
-alla fase di generazione del pagamento, unitamente alle specifiche dei
-codici da utilizzare per il versamento, ed il loro utilizzo nelle
-transazioni interbancarie. Nella **Sezione II** sono descritte: le
-modalità e le informazioni da utilizzare per la fase di regolamento
-contabile e riversamento dei fondi, nonché le modalità con le quali
-effettuare la riconciliazione dei pagamenti presso gli enti creditori.
-
-
 .. |pagoPA_logo| image:: media/header.png
 .. |image8| image:: media/image8.png
    :width: 5.90551in

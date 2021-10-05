@@ -9,6 +9,7 @@ Specifiche attuative dei codici identificativi di versamento, riversamento e ren
    _docs/STATO_DEL_DOCUMENTO.rst
    _docs/DEFINIZIONI_E_ACRONIMI.rst
    _docs/PREMESSA.rst
+   _docs/CICLO_DI_VITA_DEL_PAGAMENTO.rst
    _docs/SEZIONE_I_-_COMPOSIZIONE_DEI_CODICI_PER_IL_VERSAMENTO.rst
    _docs/Capitolo1.rst
    _docs/Capitolo2.rst
