@@ -175,8 +175,6 @@ seguente significato:
 |                                  |         |         |         |         | nel flusso.                                      |
 +----------------------------------+---------+---------+---------+---------+--------------------------------------------------+
 | identificativoUnivocoRiscossione | 2       | an      | 1..1    | 1..35   | Riferimento univoco dell’operazione              |
-|                                  |         |         |         |         | assegnato al pagamento dal Prestatore            |
-|                                  |         |         |         |         | dei servizi di Pagamento                         |
 +----------------------------------+---------+---------+---------+---------+--------------------------------------------------+
 | indiceDatiSingoloPagamento       | 2       | n       | 0..1    | 1       | Indice dell’occorrenza del pagamento             |
 |                                  |         |         |         |         | all’interno della struttura                      |
