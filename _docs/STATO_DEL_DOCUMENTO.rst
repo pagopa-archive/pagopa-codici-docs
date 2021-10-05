@@ -38,46 +38,9 @@ Stato del documento
 +-----------------------+-----------------------+----------------------------------------------------------------+
 | 1.3.1                 | 30 gennaio 2018       | Gestione REJECT e precisazioni sulla riconciliazione           |
 +-----------------------+-----------------------+----------------------------------------------------------------+
-| 1.4.0                 | ottobre 2021          | Precisazioni sui riversamenti cumulativi                       |
+| 1.4.0                 | ottobre 2021          | Riversamenti cumulativi: obbligatorietà e precisazioni         |
 +-----------------------+-----------------------+----------------------------------------------------------------+
 
-Sintesi dei cambiamenti
-
-+-------------------------------------------------------------------------------------------------------------------------------+
-| **lista dei principali cambiamenti introdotti con la  versione 1.3:**                                                         |
-|                                                                                                                               |
-|                                                                                                                               |
-+-------------------------------------------------------------------------------------------------------------------------------+
-| Eliminati tutti i riferimenti all'articolo 5, comma 1, lettera b) del CAD (abolito con dlgs 13 dicembre 217, 2017).           |
-| Sono interessai più paragrafi del testo.                                                                                      |
-+-------------------------------------------------------------------------------------------------------------------------------+
-| Sostituito l'intero capitolo 2 "Generazione dell’Identificativo Univoco di Versamento".                                       |
-| L'aggiornamento riguarda unicamente le modifiche introdotte con la monografia "Utilizzo del codice IUV per Enti               |
-| "Utilizzo del codice IUV per Enti pluri-intermediati", documento sottoposto a consultazione pubblica nel mese di maggio 2016. |
-+-------------------------------------------------------------------------------------------------------------------------------+
-| Sostituito il paragrafo 4.2 con eliminazione dei riferimenti al vecchio testo dell'articolo 5 del CAD.                        |
-+-------------------------------------------------------------------------------------------------------------------------------+
-| Precisazione sul contenuto del dato identificativoUnivocoRiscossione nel flusso di rendicontazione                            |
-| (:ref:`vedi capitolo 8 <riconciliazione-del-flusso-di-riversamento>`).                                                        |
-+-------------------------------------------------------------------------------------------------------------------------------+
-| Le modifiche introdotte dalla versione 1.3.1:                                                                                 |
-|                                                                                                                               |
-| -  precisazioni sulla composizione del SEPA Credit Transfer (:ref:`§§ 4 <operazione-di-trasferimento-fondi>` e                |
-|    :ref:`6 <riversamento-agli-enti-creditori>`)                                                                               |
-|                                                                                                                               |
-| -  processo di gestione del messaggio di REJECT predisposto dalla banca dell’Ente Creditore                                   |
-|                                                                                                                               |
-| -  nuove indicazioni sul contenuto del dato identificativoUnivocoRiscossione                                                  |
-|    (:ref:`§§ 7 <flusso-di-rendicontazione>`, :ref:`7.1 <precisazioni-sulla-colonna-contenutodella-tabella-4>`,                |
-|    :ref:`8 <riconciliazione-del-flusso-di-riversamento>`)                                                                     |
-|                                                                                                                               |
-| -  precisazione sulla gestione all’interno del flusso di rendicontazione di RT “stornate” e/o “revocate”                      |
-|    (:ref:`vedi § 7 <flusso-di-rendicontazione>`)                                                                              |
-+-------------------------------------------------------------------------------------------------------------------------------+
-| - precisazione sul trasferimento fondi (:ref:`vedi § 4 <operazione-di-trasferimento-fondi>`)                                  |
-+-------------------------------------------------------------------------------------------------------------------------------+
-|                                                                                                                               |
-+-------------------------------------------------------------------------------------------------------------------------------+
 
 .. |pagoPA_logo| image:: media/header.png
    

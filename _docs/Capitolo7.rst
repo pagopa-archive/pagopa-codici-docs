@@ -23,7 +23,7 @@ rese disponibili ai soggetti interessati a cura del prestatore di
 servizi di pagamento che ha effettuato l’operazione di pagamento.
 
 Entro e non oltre le ore 24 della seconda giornata lavorativa successiva
-alla ricezione dell’ordine di pagamento (T+2), il prestatore di servizi
+alla ricezione dell’ordine di pagamento (D+2), il prestatore di servizi
 di pagamento che ha effettuato l’operazione provvede ad inviare al Nodo
 dei Pagamenti-SPC il flusso di rendicontazione predisposto secondo lo
 schema riportato nella successiva Tabella 4.
@@ -226,15 +226,6 @@ per trasferire le informazioni del flusso di rendicontazione è fornito
 in formato elettronico nell’apposita sezione del sito dell’Agenzia per
 l’Italia Digitale.
 
-Si precisa che le Ricevute Telematiche soggette a “storno” o “revoca”
-(`vedi rispettivamente §§ 2.1.4 <http://pagopa-specifichepagamenti.readthedocs.io/it/latest/_docs/Capitolo2.html#storno-del-pagamento>`_  
-e `2.3 <http://pagopa-specifichepagamenti.readthedocs.io/it/latest/_docs/Capitolo2.html#revoca-della-ricevuta-telematica>`_  
-delle *“Specifiche attuative del Nodo dei Pagamenti-SPC”*) devono essere sempre presenti nel flusso di
-rendicontazione: il recupero di tali somme può avvenire contestualmente
-nello stesso flusso o in un flusso successivo, in funzione del momento
-di ricezione da parte del PSP dell’oggetto ER (“Esito Revoca”) avente
-esito positivo.
-
 Si sottolinea infine che, essendo il flusso di rendicontazione associato
 ad un singolo SCT di riversamento, detto flusso è ovviamente sempre
 correlato ad un unico codice IBAN di accredito.
@@ -251,12 +242,13 @@ flusso di rendicontazione:
 
 **identificativoFlusso:** deve essere lo stesso riportato nel
 componente **<idFlusso>** della causale del SEPA Credit Transfer di
-Riversamento (dato “*Unstructured Remittance Information*” -
-attributo AT-05, :ref:`vedi capitolo 6 <riversamento-agli-enti-creditori>`);
+Riversamento (dato “*Remittance Information*” - attributo AT-05,
+:ref:`vedi §4 <operazione-di-trasferimento-fondi>`);
 
 **identificativoUnivocoMittente:** la struttura deve coincidere con
 quella presente nell’elemento identificativoUnivocoAttestante
-indicato della RT rendicontata (`cfr. § 5.3.2 <http://pagopa-specifichepagamenti.readthedocs.io/it/latest/_docs/Capitolo5.html#ricevuta-telematica-rt>`_     dell’Allegato B alle Linee guida *“Specifiche Attuative del Nodo dei Pagamenti-SPC”*).
+indicato della RT rendicontata (`cfr. § 5.3.2 <http://pagopa-specifichepagamenti.readthedocs.io/it/latest/_docs/Capitolo5.html#ricevuta-telematica-rt>`_
+dell’Allegato B alle Linee guida *“Specifiche Attuative del Nodo dei Pagamenti-SPC”*).
 
 **identificativoUnivocoRegolamento:** ulteriore dato ‘non ambiguo’
 utilizzato per abbinare il flusso di rendicontazione con l’accredito
@@ -276,7 +268,8 @@ con il quale il prestatore di servizi di pagamento individua la
 singola operazione. Nel caso di utilizzo dell’infrastruttura di cui
 all’articolo 81, comma 2-bis del CAD, tale informazione si riferisce
 all’omonimo dato presente nella “Ricevuta Telematica” di cui alla
-Sezione II delle , alle quali si rimanda per i dettagli;
+Sezione II dell’Allegato B alle Linee guida, a cui si rimanda per
+i dettagli;
 
 **indiceDatiSingoloPagamento:** dato facoltativo che rappresenta la
 i-esima occorrenza di pagamento all’interno della struttura
@@ -296,9 +289,9 @@ dell’Allegato B alle Linee guida .
 
 Al fine di rendere omogenea la modalità di composizione del dato
 identificativoFlusso presente nella causale standardizzata del SEPA
-Credit Transfer (ref:`cfr. capitolo 6 <riversamento-agli-enti-creditori>`) ed anche nel flusso di rendicontazione
-di cui ref:`al capitolo 7 <flusso-di-rendicontazione>` (cfr. Tabella 4 - Flusso per la rendicontazione -
-Schema dati), sarà adottata la seguente struttura
+Credit Transfer ed anche nel flusso di rendicontazione
+di cui :ref:`al § 7 <flusso-di-rendicontazione>` (cfr. Tabella 4 - Flusso per la rendicontazione -
+Schema dati), è adottata la seguente struttura:
 
 **<data regolamento> <istituto mittente>”-“<flusso>**
 
@@ -307,15 +300,12 @@ dove i componenti sopra indicati assumono il seguente significato:
 
 - **<data regolamento>** contiene le stesse informazioni dell’elemento dataRegolamento del file XML;
 
-
-- **<istituto mittente>** contiene il codice del PSP che    predispone il flusso. Si precisa che tale 
+- **<istituto mittente>** contiene il codice del PSP che predispone il flusso. Si precisa che tale 
 codice deve coincidere con il dato identificativoPSP indicato dal PSP stesso nel 
-“*Catalogo Dati Informativi*” di cui `al paragrafo 5.3.7 <http://pagopa-specifichepagamenti.readthedocs.io/it/latest/ 
+“*Catalogo Dati Informativi*” di cui `al § 5.3.7 <http://pagopa-specifichepagamenti.readthedocs.io/it/latest/ 
 _docs/Capitolo5.html#catalogo-dati-informativi>`_  della Sezione II dell’Allegato B alle Linee guida;
 
- 
 - **"-"** dato fisso;
-                       
 
 - **<flusso>** stringa alfanumerica che, insieme alle informazioni sopra indicate, consente di 
 individuare univocamente il flusso stesso. I caratteri ammessi all’interno della stringa sono: numeri da 0 a 9, 

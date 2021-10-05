@@ -21,8 +21,8 @@ La riconciliazione del riversamento effettuato dal prestatore di servizi
 di pagamento avviene a cura dell’Ente Creditore prendendo in
 considerazione la componente **<idFlusso>** della causale del SEPA
 Credit Transfer con il quale è stato effettuato il riversamento verso
-l’Ente Creditore (:ref:`vedi capitolo 6 <riversamento-agli-enti-creditori>`) ed il dato identificativoFlusso
-presente nel flusso di rendicontazione di cui al :ref:`capitolo 7 <flusso-di-rendicontazione>`.
+l’Ente Creditore (:ref:`vedi § 4 <_operazione-di-trasferimento-fondi>`) ed il dato identificativoFlusso
+presente nel flusso di rendicontazione di cui al :ref:`§ 7 <flusso-di-rendicontazione>`.
 
 Come riscontro, il dato importoTotalePagamenti del flusso di
 rendicontazione dovrà coincidere con il dato *Amount* (attributo AT-04)

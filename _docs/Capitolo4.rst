@@ -17,7 +17,7 @@
 4. Operazione di trasferimento fondi |image6|
 ====================================
 
-Per l’operazione di trasferimento dei Fondi a ogni Ente Creditore il PSP
+Per l’operazione di trasferimento dei fondi a ogni Ente Creditore il PSP
 utilizza unicamente lo strumento SEPA Credit Transfer. Le operazioni di
 trasferimento sono cadenzate temporalmente in ogni giornata operativa
 secondo quanto meglio specificato nel paragrafo successivo. 
