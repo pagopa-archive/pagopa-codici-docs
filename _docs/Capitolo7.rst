@@ -14,7 +14,7 @@
 
 .. _riconciliazione-del-flusso-di-riversamento:
 
-8. Riconciliazione del flusso di riversamento
+7. Riconciliazione del flusso di riversamento
 =============================================
 
 La riconciliazione del riversamento effettuato dal prestatore di servizi
