@@ -204,7 +204,7 @@ seguente significato:
 |                                  |         |         |         |         |                                                  |
 |                                  |         |         |         |         |                                                  |
 |                                  |         |         |         |         | - **9** = Pagamento eseguito                     |
-|                                  |         |         |         |         |   in assenza di RPT                              |
+|                                  |         |         |         |         |   in presenza di presenza di anomalie            |
 +----------------------------------+---------+---------+---------+---------+--------------------------------------------------+
 | dataEsitoSingoloPagamento        | 2       | an      | 1..1    | 10      | Indica la data in cui è stato                    |
 |                                  |         |         |         |         | disposto o revocato il pagamento,                |
