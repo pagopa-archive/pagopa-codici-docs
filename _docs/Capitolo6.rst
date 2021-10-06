@@ -1,6 +1,6 @@
 ﻿
-|AGID_logo_carta_intestata-02.png|
-
+|pagoPA_logo|
+   
 +---------------------------------------------------------------------------------------------------+
 | **SPECIFICHE ATTUATIVE DEI CODICI IDENTIFICATIVI DI VERSAMENTO, RIVERSAMENTO E RENDICONTAZIONE**  |
 |                                                                                                   |
@@ -9,59 +9,306 @@
 | *pubbliche amministrazioni e dei gestori di pubblici servizi"*                                    |
 |                                                                                                   |
 |                                                                                                   |
-| **Versione 1.3.1 - gennaio 2018**                                                                 |
+| **Versione 1.4.0 - ottobre 2021**                                                                 |
 +---------------------------------------------------------------------------------------------------+
 
-.. _riversamento-agli-enti-creditori:
+.. _flusso-di-rendicontazione:
 
-6. Riversamento agli enti creditori |image4|
------------------------------------
+6. Flusso di Rendicontazione
+============================
 
-Fermo restando quanto indicato :ref:`al paragrafo 4.1 <giornata-operativa-ed-invio-del-sepa-credit-transfer>`, 
-in coerenza con gli articoli 15 e 20 del D. lgs n. 11/2010, per le operazioni di pagamento
-disposte attraverso il Nodo dei Pagamenti-SPC di cui alle 
-**“Specifiche attuative del Nodo dei Pagamenti-SPC”** (allegato B alle Linee guida),
-il PSP del pagatore ha facoltà di effettuare il riversamento delle somme
-incassate in modalità cumulativa per Ente Creditore beneficiario.
+Le informazioni che devono essere messe a disposizione dell'Ente
+Creditore sono organizzate in flussi omogenei di dati e devono essere
+rese disponibili ai soggetti interessati a cura del prestatore di
+servizi di pagamento che ha effettuato l’operazione di pagamento.
 
-Il relativo accredito (SCT) deve riportare nel dato “*Unstructured
-Remittance Information*” (attributo AT-05, cfr. *SEPA Credit Transfert
-Scheme Rulebook*) le seguenti informazioni, articolate secondo la già
-utilizzata strutturazione raccomandata dalla EACT:
+Entro e non oltre le ore 24 della seconda giornata lavorativa successiva
+alla ricezione dell’ordine di pagamento (D+2), il prestatore di servizi
+di pagamento che ha effettuato l’operazione provvede ad inviare al Nodo
+dei Pagamenti-SPC il flusso di rendicontazione predisposto secondo lo
+schema riportato nella successiva Tabella 4.
 
-**/PUR/<purpose>/URI/< identificativoFlusso >** 
+Le colonne *Liv*, *Gen*, *Occ* e *Len* della citata tabella assumono il
+seguente significato:
 
-Dove:
++-------------+----------+-------------------------------------------------------------------------------+
+| **colonna** | *Liv*    | indica il livello di                                                          |
+|             |          | indentazione del dato al fine di rendere evidenti le strutture che contengono |
+|             |          | ulteriori informazioni (colonna "Gen" uguale ad *s*): esempio, le strutture di|
+|             |          | livello 1 sono formate da tutti i dati di livello superiore ad 1, quelle di   |
+|             |          | livello 2 sono formate da tutti i dati di livello superiore a 2, e così via.  |
++-------------+----------+-------------------------------------------------------------------------------+
+| **colonna** | *Gen*    | indica il genere (tipo) del dato da utilizzare; può assumere                  |
+|             |          | i seguenti valori:                                                            |
+|             |          |                                                                               |
+|             |          | - s - struttura che può contenere altre strutture o dati,                     |
+|             |          |                                                                               |
+|             |          | - an - dato alfanumerico                                                      |
+|             |          |                                                                               |
+|             |          | - n - dato numerico.                                                          |
++-------------+----------+-------------------------------------------------------------------------------+
+| **colonna** | *Occ*    | indica le “occorrenze” del dato nel formato **min..max.**                     |
++-------------+----------+-------------------------------------------------------------------------------+
+| **colonna** | *Len*    | indica la lunghezza massima del dato nel formato                              |
+|             |          | **min..max;** nel caso si tratti di una lunghezza fissa                       |
+|             |          | comparirà solo il dato *len*, nel caso di lunghezze fisse                     |
+|             |          | in alternativa la notazione sarà *len1 / len2.*                               |
++-------------+----------+-------------------------------------------------------------------------------+
 
-“**/PUR/**” e “**/URI/**” sono costanti (*tag*) definite dallo standard EACT,
-<**purpose**> rappresenta la codifica dello ‘scopo’ (PURpose) del
-SCT, e deve riportare il valore prefissato **LGPE-RIVERSAMENTO**
+**Tabella** **4 - Flusso per la rendicontazione - Schema dati**
 
-**< idFlusso >** specifica il dato relativo all’informazione
-identificativoFlusso presente nel flusso di rendicontazione
-descritto nel successivo :ref:`capitolo 7 <flusso-di-rendicontazione>`.
++----------------------------------+---------+---------+---------+---------+--------------------------------------------------+
+| **Dato**                         | **Liv** | **Gen** | **Occ** | **Len** | **Contenuto**                                    |
++----------------------------------+---------+---------+---------+---------+--------------------------------------------------+
+| versioneOggetto                  | 1       | an      | 1..1    | 1..16   | Versione che identifica l’oggetto scambiato.     |
+|                                  |         |         |         |         |                                                  |
+|                                  |         |         |         |         | Valori ammessi: **“1.0” e “1.1”**                |
++----------------------------------+---------+---------+---------+---------+--------------------------------------------------+
+| identificativoFlusso             | 1       | an      | 1..1    | 1..35   | Identificativo legato alla                       |
+|                                  |         |         |         |         | generazione e trasmissione                       |
+|                                  |         |         |         |         | del flusso di riversamento.                      |
+|                                  |         |         |         |         |                                                  |
+|                                  |         |         |         |         | Deve essere univoco                              |
+|                                  |         |         |         |         | nell’ambito dell’anno di                         |
+|                                  |         |         |         |         | riferimento delle operazioni                     |
+|                                  |         |         |         |         | di pagamento cui si                              |
+|                                  |         |         |         |         | riferisce il flusso.                             |
+|                                  |         |         |         |         |                                                  |
+|                                  |         |         |         |         | Per la composizione del dato si                  |
+|                                  |         |         |         |         | faccia riferimento                               |
+|                                  |         |         |         |         | al successivo paragrafo                          |
+|                                  |         |         |         |         | :ref:`6.2 <stand-del-dato-identificativoflusso>` |
++----------------------------------+---------+---------+---------+---------+--------------------------------------------------+
+| dataOraFlusso                    | 1       | an      | 1..1    | 19      | Indica la data e ora di                          |
+|                                  |         |         |         |         | creazione del flusso,                            |
+|                                  |         |         |         |         | secondo il formato ISO 8601                      |
+|                                  |         |         |         |         |                                                  |
+|                                  |         |         |         |         | **[YYYY]-[MM]-[DD]T[hh]:[mm]:[ss]**              |
++----------------------------------+---------+---------+---------+---------+--------------------------------------------------+
+| identificativoUnivocoRegolamento | 1       | an      | 1..1    | 1..35   | Riferimento dell’operazione di           |
+|                                  |         |         |         |         | trasferimento fondi con la quale viene           |
+|                                  |         |         |         |         | regolato contabilmente il riversamento           |
+|                                  |         |         |         |         | delle somme incassate ovvero l’accumulo          |
+|                                  |         |         |         |         | degli accrediti disposti dai clienti.            |
++----------------------------------+---------+---------+---------+---------+--------------------------------------------------+
+| dataRegolamento                  | 3       | an      | o       | 10      | Indica la data di esecuzione                     |
+|                                  |         |         |         |         | dell’operazione di trasferimento                 |
+|                                  |         |         |         |         | fondi con la quale viene regolato                |
+|                                  |         |         |         |         | contabilmente il riversamento delle              |
+|                                  |         |         |         |         | somme incassate, nel formato ISO                 |
+|                                  |         |         |         |         | 8601 [YYYY]-[MM]-[DD].                           |
++----------------------------------+---------+---------+---------+---------+--------------------------------------------------+
+| istitutoMittente                 | 1       | s       | 1..1    |         | Aggregazione relativa al prestatore              |
+|                                  |         |         |         |         | di servizi di pagamento mittente                 |
+|                                  |         |         |         |         | che genera il presente flusso.                   |
++----------------------------------+---------+---------+---------+---------+--------------------------------------------------+
+| identificativoUnivocoMittente    | 2       | s       | 1..1    |         | Aggregazione che riporta le informazioni         |
+|                                  |         |         |         |         | concernenti l’identificazione dell’Istituto      |
+|                                  |         |         |         |         | mittente del flusso.                             |
++----------------------------------+---------+---------+---------+---------+--------------------------------------------------+
+| tipoIdentificativoUnivoco        | 3       | an      | 1..1    | 1       | Campo alfanumerico che descrive la               |
+|                                  |         |         |         |         | codifica utilizzata per individuare              |
+|                                  |         |         |         |         | l’Istituto Mittente; se presente può             |
+|                                  |         |         |         |         | assumere i seguenti valori:                      |
+|                                  |         |         |         |         |                                                  |
+|                                  |         |         |         |         |                                                  |
+|                                  |         |         |         |         | - **‘G’** = persona giuridica                    |
+|                                  |         |         |         |         |                                                  |
+|                                  |         |         |         |         |                                                  |
+|                                  |         |         |         |         | - **‘A’** = Codice ABI                           |
+|                                  |         |         |         |         |                                                  |
+|                                  |         |         |         |         |                                                  |
+|                                  |         |         |         |         | - **‘B’** = Codice BIC                           |
+|                                  |         |         |         |         |   (standard ISO 9362)                            |
++----------------------------------+---------+---------+---------+---------+--------------------------------------------------+
+| codiceIdentificativoUnivoco      | 3       | an      | 1..1    | 1..35   | Campo alfanumerico che può contenere             |
+|                                  |         |         |         |         | il codice fiscale o la partita IVA,              |
+|                                  |         |         |         |         | il codice ABI o il codice BIC del                |
+|                                  |         |         |         |         | prestatore di servizi di pagamento               |
+|                                  |         |         |         |         | mittente, in funzione del dato                   |
+|                                  |         |         |         |         | tipoIdentificativoUnivoco.                       |
++----------------------------------+---------+---------+---------+---------+--------------------------------------------------+
+| denominazioneMittente            | 2       | an      | 0..1    | 1..70   | Contiene la denominazione del                    |
+|                                  |         |         |         |         | prestatore di servizi di pagamento               |
+|                                  |         |         |         |         | mittente che genera il flusso.                   |
++----------------------------------+---------+---------+---------+---------+--------------------------------------------------+
+| codiceBicBancaDiRiversamento     | 2       | an      | 0..1    | 1..35   | Contiene il codice BIC del PSP che ha            |
+|                                  |         |         |         |         | generato il SEPA Credit Transfer                 |
+|                                  |         |         |         |         | di riversamento. Corrisponde al dato             |
+|                                  |         |         |         |         | AT-09 del SCT.                                   |
++----------------------------------+---------+---------+---------+---------+--------------------------------------------------+
+| istitutoRicevente                | 1       | s       | 1..1    |         | Aggregazione relativa all’Ente                   |
+|                                  |         |         |         |         | Creditore destinatario del flusso.               |
++----------------------------------+---------+---------+---------+---------+--------------------------------------------------+
+| identificativoUnivocoRicevente   | 2       | s       | 1..1    |         | Aggregazione che riporta le informazioni         |
+|                                  |         |         |         |         | concernenti l’identificazione fiscale            |
+|                                  |         |         |         |         | dell’Ente Creditore che riceve il flusso.        |
++----------------------------------+---------+---------+---------+---------+--------------------------------------------------+
+| tipoIdentificativoUnivoco        | 3       | an      | 1..1    | 1       | Campo alfanumerico che indica la natura          |
+|                                  |         |         |         |         | dell’Ente Creditore; se presente deve            |
+|                                  |         |         |         |         | assumere il valore **‘G’**,                      |
+|                                  |         |         |         |         | Identificativo fiscale Persona Giuridica.        |
++----------------------------------+---------+---------+---------+---------+--------------------------------------------------+
+| codiceIdentificativoUnivoco      | 3       | an      | 1..1    | 1..35   | Campo alfanumerico contenente il                 |
+|                                  |         |         |         |         | codice fiscale dell’Ente Creditore               |
+|                                  |         |         |         |         | destinatario del flusso.                         |
++----------------------------------+---------+---------+---------+---------+--------------------------------------------------+
+| denominazioneRicevente           | 2       | an      | 0..1    | 1..70   | Contiene la denominazione dell’Ente              |
+|                                  |         |         |         |         | Creditore che riceve il flusso.                  |
++----------------------------------+---------+---------+---------+---------+--------------------------------------------------+
+| numeroTotalePagamenti            | 1       | n       | 1..1    | 1..15   | Numero dei pagamenti presenti                    |
+|                                  |         |         |         |         | nel flusso.                                      |
++----------------------------------+---------+---------+---------+---------+--------------------------------------------------+
+| importoTotalePagamenti           | 1       | n       | 1..1    | 1..18   | Importo totale dei pagamenti presenti            |
+|                                  |         |         |         |         | nel flusso. Deve coincidere con la               |
+|                                  |         |         |         |         | somma dei dati singoloImportoPagato              |
+|                                  |         |         |         |         | presenti nel flusso.                             |
+|                                  |         |         |         |         |                                                  |
+|                                  |         |         |         |         | **Deve essere maggiore di 0.**                   |
++----------------------------------+---------+---------+---------+---------+--------------------------------------------------+
+| datiSingoliPagamenti             | 1       | s       | 1 n     |         | Aggregazione con un numero di                    |
+|                                  |         |         |         |         | occorrenze pari all’elemento                     |
+|                                  |         |         |         |         | numeroTotalePagamenti                            |
++----------------------------------+---------+---------+---------+---------+--------------------------------------------------+
+| identificativoUnivocoVersamento  | 2       | an      | 1..1    | 1..35   | Riporta il dato codice IUV cui si                |
+|                                  |         |         |         |         | riferisce il pagamento rendicontato              |
+|                                  |         |         |         |         | nel flusso.                                      |
++----------------------------------+---------+---------+---------+---------+--------------------------------------------------+
+| identificativoUnivocoRiscossione | 2       | an      | 1..1    | 1..35   | Riferimento univoco dell’operazione              |
++----------------------------------+---------+---------+---------+---------+--------------------------------------------------+
+| indiceDatiSingoloPagamento       | 2       | n       | 0..1    | 1       | Indice dell’occorrenza del pagamento             |
+|                                  |         |         |         |         | all’interno della struttura                      |
+|                                  |         |         |         |         | datiSingoloPagamento                             |
+|                                  |         |         |         |         | della Ricevuta Telematica.                       |
++----------------------------------+---------+---------+---------+---------+--------------------------------------------------+
+| singoloImportoPagato             | 2       | an      | 1..1    | 3..12   | Campo numerico indicante                         |
+|                                  |         |         |         |         | l’importo relativo alla                          |
+|                                  |         |         |         |         | somma pagata o revocata.                         |
+|                                  |         |         |         |         | Deve essere diverso da 0.                        |
+|                                  |         |         |         |         |                                                  |
+|                                  |         |         |         |         | Qualora il singolo importo                       |
+|                                  |         |         |         |         | pagato è riferito                                |
+|                                  |         |         |         |         | ad un pagamento revocato                         |
+|                                  |         |         |         |         | (dato codiceEsitoSingoloPagamento =3)            |
+|                                  |         |         |         |         | deve assumere un valore negativo.                |
++----------------------------------+---------+---------+---------+---------+--------------------------------------------------+
+| codiceEsitoSingoloPagamento      | 2       | n       | 1..1    | 1       | Campo numerico indicante l’esito                 |
+|                                  |         |         |         |         | del pagamento. Può assumere i                    |
+|                                  |         |         |         |         | seguenti valori:                                 |
+|                                  |         |         |         |         |                                                  |
+|                                  |         |         |         |         |                                                  |
+|                                  |         |         |         |         | - **0** = Pagamento eseguito                     |
+|                                  |         |         |         |         |                                                  |
+|                                  |         |         |         |         |                                                  |
+|                                  |         |         |         |         | - **3** = Pagamento revocato                     |
+|                                  |         |         |         |         |                                                  |
+|                                  |         |         |         |         |                                                  |
+|                                  |         |         |         |         | - **9** = Pagamento eseguito                     |
+|                                  |         |         |         |         |   in presenza di presenza di anomalie            |
++----------------------------------+---------+---------+---------+---------+--------------------------------------------------+
+| dataEsitoSingoloPagamento        | 2       | an      | 1..1    | 10      | Indica la data in cui è stato                    |
+|                                  |         |         |         |         | disposto o revocato il pagamento,                |
+|                                  |         |         |         |         | nel formato ISO 8601                             |
+|                                  |         |         |         |         | [YYYY]-[MM]-[DD].                                |
++----------------------------------+---------+---------+---------+---------+--------------------------------------------------+
 
-Qualora, al momento della predisposizione del flusso di rendicontazione,
-il prestatore di servizi di pagamento non disponga del TRN (attributo
-AT-43 Originator Bank’s reference number) del SEPA Credit Transfer
-relativo al flusso di cui sopra, dovrà indicare nel dato
-“*EndToEndId”* (attributo AT-41 Originator’s Reference), lo stesso
-identico valore che è stato in precedenza indicato nel dato
-identificativoUnivocoRiscossione del flusso di rendicontazione 
-(vedi Tabella 4 a pagina 23).
+Per quanto riguarda gli Enti Creditori, tali flussi omogenei di dati
+sono messi a loro disposizione attraverso l’infrastruttura di cui
+all’articolo 5, comma 2 del CAD alla quale sono tenuti a collegarsi i
+prestatori di servizi di pagamento che effettuano il riversamento, con
+le modalità riportate nelle (Allegato B alle Linee guida).
 
-Per quanto riguarda le modalità di gestione del rifiuto del SCT
-(messaggio di REJECT) da parte della banca dell’Ente Creditore, 
-:ref:`si faccia riferimento al § 4.3 <rifiuto-del-sepa-credit-transfer>`.
+Lo schema XML (XSD) descrittivo del contenuto dei file XML utilizzati
+per trasferire le informazioni del flusso di rendicontazione è fornito
+in formato elettronico nell’apposita sezione del sito dell’Agenzia per
+l’Italia Digitale.
 
-Per quanto riguarda il riversamento relativo ai pagamenti riguardanti la
-Marca da bollo digitale, per i quali non è necessario effettuare alcun
-riversamento, si rimanda a quanto :ref:`indicato al § 5.1 <specificità-per-il-pagamento-della-marca-da-bollo-digitale>`.
+Si sottolinea infine che, essendo il flusso di rendicontazione associato
+ad un singolo SCT di riversamento, detto flusso è ovviamente sempre
+correlato ad un unico codice IBAN di accredito.
+
+.. _precisazioni-sulla-colonna-contenutodella-tabella-4:
+
+6.1 Precisazioni sulla colonna “contenuto” della Tabella 4
+----------------------------------------------------------
+
+Tenuto presente che il significato dei dati richiesti per il flusso di
+rendicontazione è riportato nella colonna “contenuto” della Tabella 4,
+di seguito sono riportate alcune precisazioni sui dati presenti nel
+flusso di rendicontazione:
+
+**identificativoFlusso:** deve essere lo stesso riportato nel
+componente **<idFlusso>** della causale del SEPA Credit Transfer di
+Riversamento (dato “*Remittance Information*” - attributo AT-05,
+:ref:`vedi §4 <operazione-di-trasferimento-fondi>`);
+
+**identificativoUnivocoMittente:** la struttura deve coincidere con
+quella presente nell’elemento identificativoUnivocoAttestante
+indicato della RT rendicontata (cfr. Allegato B alle Linee guida *“Specifiche Attuative del Nodo dei Pagamenti-SPC”*).
+
+**identificativoUnivocoRegolamento:** ulteriore dato ‘non ambiguo’
+utilizzato per abbinare il flusso di rendicontazione con l’accredito
+ricevuto. Contiene il *Transaction Reference Number* (TRN, attributo AT-43 Originator Bank’s Reference) dell'SCT 
+di riversamento (cfr. *SEPA Credit Transfert Scheme Rulebook*):
 
 
-.. |AGID_logo_carta_intestata-02.png| image:: media/header.png
-   :width: 5.90551in
-   :height: 1.30277in
-.. |image4| image:: media/image7.png
-   :width: 0.7874in
-   :height: 0.22905in
+**identificativoUnivocoRiscossione:** rappresenta l’identificativo
+con il quale il prestatore di servizi di pagamento individua la
+singola operazione. Nel caso di utilizzo dell’infrastruttura di cui
+all’articolo 81, comma 2-bis del CAD, tale informazione si riferisce
+all’omonimo dato presente nella “Ricevuta Telematica” di cui alla
+Sezione II dell’Allegato B alle Linee guida;
+
+**indiceDatiSingoloPagamento:** dato facoltativo che rappresenta la
+i-esima occorrenza di pagamento all’interno della struttura
+datiSingoloPagamento presente nell’oggetto RT (“Ricevuta
+Telematica”) di cui alla Sezione II dell’Allegato B alle Linee guida;
+
+**dataEsitoSingoloPagamento:** tale data deve coincidere con quella
+dell’omologo dato presente nell’oggetto RT (“Ricevuta Telematica”)
+di cui alla Sezione II dell’Allegato B alle Linee guida.
+
+.. _stand-del-dato-identificativoflusso:
+
+6.2 Standardizzazione del dato identificativoFlusso 
+---------------------------------------------------
+
+Al fine di rendere omogenea la modalità di composizione del dato
+identificativoFlusso presente nella causale standardizzata del SEPA
+Credit Transfer ed anche nel flusso di rendicontazione
+di cui :ref:`al § 6 <flusso-di-rendicontazione>` (cfr. Tabella 4 - Flusso per la rendicontazione -
+Schema dati), è adottata la seguente struttura:
+
+**<data regolamento> <istituto mittente>”-“<flusso>**
+
+dove i componenti sopra indicati assumono il seguente significato:
+
+
+- **<data regolamento>** contiene le stesse informazioni dell’elemento dataRegolamento del file XML;
+
+- **<istituto mittente>** contiene il codice del PSP che predispone il flusso. Si precisa che tale 
+codice deve coincidere con il dato identificativoPSP indicato dal PSP stesso nel 
+“*Catalogo Dati Informativi*” (cfr. Allegato B alle Linee guida);
+
+- **"-"** dato fisso;
+
+- **<flusso>** stringa alfanumerica che, insieme alle informazioni sopra indicate, consente di 
+individuare univocamente il flusso stesso. I caratteri ammessi all’interno della stringa sono: numeri da 0 a 9, 
+lettere dell’alfabeto latino maiuscole e minuscole ed seguenti caratteri.
+
++-------------------------------+-------------------+-------------+---------------------+
+|                               | **ASCII**         | **Simbolo** | **Nome**            |
+|                               +-------------------+             +                     +
+|                               | **Dec** | **Hex** |             |                     |
+|                               +---------+---------+-------------+---------------------+
+|                               | 45      | 2D      | \-          | minus sign - hyphen |
+|                               +---------+---------+-------------+---------------------+
+|                               | 95      | 5F      | _           | underscore          |
++-------------------------------+---------+---------+-------------+---------------------+
+
+Esempi: **2015-07-15xxxxxxxx-0000000001**
+
+**2015-07-15xxxxxxxx-hh_mm_ss_nnn**
+
+
+.. |pagoPA_logo| image:: media/header.png

@@ -1,5 +1,5 @@
 ﻿
-|AGID_logo_carta_intestata-02.png|
+|pagoPA_logo|
 
 +---------------------------------------------------------------------------------------------------+
 | **SPECIFICHE ATTUATIVE DEI CODICI IDENTIFICATIVI DI VERSAMENTO, RIVERSAMENTO E RENDICONTAZIONE**  |
@@ -9,7 +9,7 @@
 | *pubbliche amministrazioni e dei gestori di pubblici servizi"*                                    |
 |                                                                                                   |
 |                                                                                                   |
-| **Versione 1.3.1 - gennaio 2018**                                                                 |
+| **Versione 1.4.0 - ottobre 2021**                                                                 |
 +---------------------------------------------------------------------------------------------------+
 
 .. _SezioneI:
@@ -31,12 +31,10 @@ regole di composizione della causale che - ai sensi dell’articolo 5,
 comma 1, lettera a), numero 2) del CAD - rappresenta il codice «\ *da
 indicare obbligatoriamente per il versamento*\ ».
 
-Da ultimo, nel capitolo 4, verranno indicate le regole base per la
+Nel capitolo 4, verranno indicate le regole base per la
 composizione dell’operazione di trasferimento fondi, mentre nel capitolo
-5 saranno date istruzioni per la riconciliazione dei pagamenti che non
-sono oggetto di un riversamento cumulativo.
+5 sarà illustrata la specificità per il pagamento della Marca da bollo
+digitale. Infine, nel capitolo 6 verrà dettagliata la composizione del Flusso
+di Rendicontazione e nel capitolo 7 la riconciliazione del flusso di riversamento.
 
-.. |AGID_logo_carta_intestata-02.png| image:: media/header.png
-   :width: 5.90551in
-   :height: 1.30277in
-   
+.. |pagoPA_logo| image:: media/header.png

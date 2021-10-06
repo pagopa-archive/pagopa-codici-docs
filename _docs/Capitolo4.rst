@@ -1,5 +1,5 @@
 ﻿
-|AGID_logo_carta_intestata-02.png|
+|pagoPA_logo|
    
 +---------------------------------------------------------------------------------------------------+
 | **SPECIFICHE ATTUATIVE DEI CODICI IDENTIFICATIVI DI VERSAMENTO, RIVERSAMENTO E RENDICONTAZIONE**  |
@@ -9,33 +9,76 @@
 | *pubbliche amministrazioni e dei gestori di pubblici servizi"*                                    |
 |                                                                                                   |
 |                                                                                                   |
-| **Versione 1.3.1 - gennaio 2018**                                                                 |
+| **Versione 1.4.0 - ottobre 2021**                                                                 |
 +---------------------------------------------------------------------------------------------------+
 
 .. _operazione-di-trasferimento-fondi:
 
-4. Operazione di trasferimento fondi |image4|
+4. Operazione di trasferimento fondi
 ====================================
+
+Per l’operazione di trasferimento dei fondi a ogni Ente Creditore il PSP
+utilizza unicamente lo strumento SEPA Credit Transfer. Le operazioni di
+trasferimento sono cadenzate temporalmente in ogni giornata operativa
+secondo quanto meglio specificato nel paragrafo successivo. 
+In coerenza con gli articoli 15 e 20 del D. lgs n. 11/2010 il PSP
+del pagatore deve effettuare il riversamento delle somme incassate in
+modalità cumulativa per ogni giornata operativa, disponendo un solo SCT
+per ogni IBAN di incasso specificato nelle richieste di pagamento ricevute.
 
 Per l’esecuzione dell’operazione devono essere utilizzati gli schemi
 previsti del SEPA Credit Transfer (cfr SEPA *Credit Transfert Scheme
 Rulebook* pubblicato da EPC [6]_).
 
-In particolare la causale di versamento, il cui formato è stato
-descritto nel capitolo 3, **deve essere riportata** nel dato
-“*Unstructured Remittance Information*” presente nel tracciato del
-SEPA Credit Transfer (attributo AT-05).
+La tabella indica come valorizzare gli attributi dello schema di un SCT: 
 
-È inoltre opportuno che il prestatore di servizi di pagamento indichi,
-nel dato “\ *End To End Id”* (attributo AT-41 Originator’s Reference),
-lo stesso identico valore che è stato indicato nell’elemento
-identificativoUnivocoRiscossione della Ricevuta Telematica a cui il SCT
-fa riferimento.
++--------+--------------------------+------------------------------------------------+---------+
+| **ID** | **Nome**                 | **Valore**                                     | **nota**|
++========+==========================+================================================+=========+
+| AT-02. | Ordinante.               | <Ragione Sociale PSP> Servizio pagoPA.         |.        |
++--------+--------------------------+------------------------------------------------+---------+
+| AT-05. | Remittance Information.  | /PUR/LGPE-RIVERSAMENTO <Descrizione> pagamenti |         |
+|.       |                          | del <aaaammgg>/URI/<identificativoFlusso>      |         |
++--------+--------------------------+------------------------------------------------+---------+
+| AT-10. | Codice Identificativo.   | <CF Ordinante>                                 | opt.    |
+|.       |.Ordinante.               |                                                |.        |
++--------+--------------------------+------------------------------------------------+---------+
+| AT-20. | Iban Beneficiario.       | <Ragione Sociale Ente Creditore>               |.        |
++--------+--------------------------+------------------------------------------------+---------+
+| AT-24. | Codice Indentificativo.  | <CF Beneficiario>                              |.        |
+|.       | Beneficiario.            |                                                |.        |
++--------+--------------------------+------------------------------------------------+---------+
+| AT-42. | Referenza ordinante.     | <aaaammgg><EndToEndID>                         |.        |
++--------+--------------------------+------------------------------------------------+---------+
+La nota "opt" indica che la valorizzazione è opzionale.
 
-Il prestatore di servizi di pagamento che tratta l’operazione potrà
-altresì indicare il codice fiscale dell’ordinante, laddove conosciuto,
-nel dato “*Originator Identification Code”* (attributo AT-10) presente
-nel tracciato del SEPA Credit Transfer.
+Legenda: 
+
+-  <Descrizione>: assume di default il valore “Cumulativo” (ovvero
+   “Cumulativo same day” nel caso che la data del trasferimento e quella di
+   incasso coincidano). Nel caso il PSP disponga ulteriori SCT, relativi alla
+   stessa giornata operativa di incasso, assume il valore “Integrativo”<numero d’ordine>,
+   dove il numero d’ordine è un progressivo di una cifra compreso fra 1 e 9.
+   NB: Il numero massimo di SCT per la stessa giornata operativa dovrà essere
+   tassativamente pari a 10. 
+-  <aaaammgg>: data della giornata operativa di incasso delle richieste di pagamento
+-  <Iban Beneficiario>: Il PSP attinge tale dato dalle richieste di pagamento eseguite.
+-  <Ragione Sociale Ente Creditore>: Il PSP attinge tale dato dalle richieste di pagamento
+   eseguite.
+-  <CF Beneficiario>: Il PSP attinge tale dato dalle richieste di pagamento eseguite.
+-  <idFlusso>: specifica il dato relativo all’informazione identificativoFlusso presente
+   nel flusso di rendicontazione descritto nel successivo :ref:`§ 6 <flusso-di-rendicontazione>`.
+-  <EndToEndID>: è riportato il dato identificativoUnivocoRiscossione indicato nel
+   Flusso di rendicontazione. Viene valorizzato solo nel casi in cui il PSP al momento
+   della predisposizione del flusso di rendicontazione non disponga del TRN. L’utilizzo
+   tuttavia è deprecato e verrà dismesso in futuro.
+
+NB: Al fine di effettuare una riconciliazione automatica del versamento le informazioni
+dell’attributo AT-05 sono state composte secondo la struttura proposta dall’Associazione
+Europea dei Tesorieri di Impresa (EACT) nel documento EACT FORMATTING RULES OF SEPA
+“UNSTRUCTURED” 140 CHRS FIELD FOR REMITTANCE INFORMATION e finalizzata al trattamento
+automatizzato delle informazioni tra partner commerciali. In particolare le stringe
+“/PUR/” e “/URI/” sono tag costanti il cui significato è definito dallo standard EACT.
 
 .. _giornata-operativa-ed-invio-del-sepa-credit-transfer: 
 
@@ -81,7 +124,7 @@ Creditore nella misura economica direttamente imputabile al PSP.
 
 .. _utilizzo-del-bollettino-di-conto-corrente-postale:
 
-4.2 Utilizzo del bollettino di conto corrente postale |image5| 
+4.2 Utilizzo del bollettino di conto corrente postale 
 -----------------------------------------------------
 
 
@@ -89,11 +132,11 @@ La causale del versamento - obbligatoria per le pubbliche
 amministrazioni ai sensi dell’articolo 4, comma 4, del DPR 144/2001 -
 deve essere compilata anche per i versamenti a favore dei gestori di
 pubblici servizi e deve essere conforme al formato descritto nel
-:ref:`capitolo 3 <formato-della-causale-di-versamento>`.
+:ref:`§ 3 <formato-della-causale-di-versamento>`.
 
 .. _rifiuto-del-sepa-credit-transfer:
 
-4.3 Rifiuto del SEPA Credit Transfer |image7|
+4.3 Rifiuto del SEPA Credit Transfer
 ------------------------------------
 
 Qualora il SEPA Credit Transfer venga restituito con messaggio di REJECT
@@ -109,7 +152,7 @@ quale dovrà indicare le informazioni di Tabella 4.
 +===================================+==========================================================+
 | Identificativo del PSP            | così come indicato nella componente <istituto mittente>  |
 |                                   | del dato identificativoFlusso,                           |
-|                                   | :ref:`vedi § 7.2 <stand-del-dato-identificativoflusso>`  |
+|                                   | :ref:`vedi § 6.2 <stand-del-dato-identificativoflusso>`  |
 +-----------------------------------+----------------------------------------------------------+
 | Denominazione del PSP             |                                                          |
 +-----------------------------------+----------------------------------------------------------+
@@ -157,15 +200,4 @@ indicare le stesse informazioni sopra riportate (Tabella 4).
    n. 112.
 
 
-.. |AGID_logo_carta_intestata-02.png| image:: media/header.png
-   :width: 5.90551in
-   :height: 1.30277in
-.. |image4| image:: media/image7.png
-   :width: 0.7874in
-   :height: 0.22905in
-.. |image5| image:: media/image5.png
-   :width: 0.7874in
-   :height: 0.24059in
-.. |image7| image:: media/image4.png
-   :width: 0.7874in
-   :height: 0.22651in
+.. |pagoPA_logo| image:: media/header.png

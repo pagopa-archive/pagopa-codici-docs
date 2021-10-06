@@ -1,5 +1,5 @@
 ﻿
-|AGID_logo_carta_intestata-02.png|
+|pagoPA_logo|
 
 +---------------------------------------------------------------------------------------------------+
 | **SPECIFICHE ATTUATIVE DEI CODICI IDENTIFICATIVI DI VERSAMENTO, RIVERSAMENTO E RENDICONTAZIONE**  |
@@ -9,13 +9,16 @@
 | *pubbliche amministrazioni e dei gestori di pubblici servizi"*                                    |
 |                                                                                                   |
 |                                                                                                   |
-| **Versione 1.3.1 - gennaio 2018**                                                                 |
+| **Versione 1.4.0 - ottobre 2021**                                                                 |
 +---------------------------------------------------------------------------------------------------+
 
 .. _formato-della-causale-di-versamento:
 
-3. Formato della Causale di versamento 
+3. Formato della Causale di versamento
 ======================================
+
+**NB**: il presente capitolo è applicabile esclusivamente per le casistiche indicate nel
+:ref:`§ 4.2 <utilizzo-del-bollettino-di-conto-corrente-postale>`.
 
 La causale di versamento è il dato, predisposto dall’Ente Creditore, che
 il pagatore o il soggetto versante deve indicare - insieme al codice
@@ -31,7 +34,7 @@ e finalizzata al trattamento automatizzato delle informazioni tra partner commer
 In particolare, utilizzando questa configurazione, potranno essere
 utilizzate due stringhe di caratteri alternative tra loro in funzione
 della modalità di generazione del codice IUV da parte dell’Ente
-Creditore (vedi capitolo 2):
+Creditore (vedi § 2):
 
 +-------------------------------------------------+-----------------------------------------------------------------------+
 | **/RFS/<IUV>/<importo>[/TXT/<descrizione >]**   | Schemi (D), (F)                                                       |  
@@ -115,7 +118,4 @@ comunicazione del debitore inserita dal PSP successivamente
 all’imputazione della disposizione di accredito (SCT).
 
 
-.. |AGID_logo_carta_intestata-02.png| image:: media/header.png
-   :width: 5.90551in
-   :height: 1.30277in
-   
+.. |pagoPA_logo| image:: media/header.png

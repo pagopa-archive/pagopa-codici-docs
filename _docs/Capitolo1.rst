@@ -1,5 +1,5 @@
 ﻿
-|AGID_logo_carta_intestata-02.png|
+|pagoPA_logo|
 
 +---------------------------------------------------------------------------------------------------+
 | **SPECIFICHE ATTUATIVE DEI CODICI IDENTIFICATIVI DI VERSAMENTO, RIVERSAMENTO E RENDICONTAZIONE**  |
@@ -9,7 +9,7 @@
 | *pubbliche amministrazioni e dei gestori di pubblici servizi"*                                    |
 |                                                                                                   |
 |                                                                                                   |
-| **Versione 1.3.1 - gennaio 2018**                                                                 |
+| **Versione 1.4.0 - ottobre 2021**                                                                 |
 +---------------------------------------------------------------------------------------------------+
 
 
@@ -35,8 +35,8 @@ riconosciute).
 Le pagine di tali siti web, dedicate all'effettuazione dei pagamenti
 devono esporre il logo del sistema pagoPA\ :sup:`®` per dare prova della
 loro informatizzazione e promuovere i servizi di pagamento elettronici
-offerti attraverso il Sistema (`cfr. § 11.5 delle "Specifiche Attuative
-del Nodo dei Pagamenti-SPC" <http://pagopa-specifichepagamenti.readthedocs.io/it/latest/_docs/Capitolo11.html#utilizzo-del-marchio-pagopa>`_ Allegato B alle Linee guida).
+offerti attraverso il Sistema (`cfr. "Specifiche Attuative
+del Nodo dei Pagamenti-SPC" <https://docs.italia.it/italia/pagopa/pagopa-specifichepagamenti-docs/it/master/_docs/sezione4-adesione-al-sistema/7_00_00_utilizzo_marchio.html>`_ Allegato B alle Linee guida).
 
 Gli indirizzi internet dei servizi dedicati ai pagamenti devono essere
 inoltre pubblicati sull'Indice delle Pubbliche Amministrazioni
@@ -47,6 +47,4 @@ tecniche per il protocollo informatico.
 .. [1]
    Vedi http://www.indicepa.gov.it/
 
-.. |AGID_logo_carta_intestata-02.png| image:: media/header.png
-   :width: 5.90551in
-   :height: 1.30277in
+.. |pagoPA_logo| image:: media/header.png
